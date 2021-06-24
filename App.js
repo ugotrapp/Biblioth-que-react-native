@@ -20,7 +20,7 @@ export default function App() {
   ])
 
   
-  function searchWord(){
+  function search(){
     setBooks(books.filter(book => book.name.includes(searchInput)));
     }
   
@@ -40,7 +40,7 @@ export default function App() {
           
             <TextInput style={styles.input} value={searchInput}
             onChangeText={(text) => {setSearchInput(text)}} placeholder="Rechercher un livre" />
-            <Button title="Ok" color="#f39c12" onPress={searchWord}/>
+            <Button title="Ok" color="#f39c12" onPress={search}/>
           </View>
 
           {peopleJSX}
